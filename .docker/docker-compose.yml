@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+    recipe_webserver:
+        container_name: recipe
+        build:
+            context: ../
+            dockerfile: .docker/Dockerfile
+        volumes:
+            - ../:/usr/src/app
+        ports:
+            - ${WEBSERVER_PORT}:8000
+        stdin_open: true
+        tty: true
+        restart: always
+        command: >
+            sh -c "python manage.py runserver 0.0.0.0:8000"

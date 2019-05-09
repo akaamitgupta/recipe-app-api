@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    recipe_webserver:
+        volumes:
+            - recipe_volume_sync:/usr/src/app:nocopy
+
+volumes:
+    recipe_volume_sync:
+        external: true
