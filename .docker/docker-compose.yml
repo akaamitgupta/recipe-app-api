@@ -9,7 +9,7 @@ services:
         volumes:
             - ../:/usr/src/app
         ports:
-            - ${WEBSERVER_PORT}:8000
+            - 8011:8000
         stdin_open: true
         tty: true
         restart: always
