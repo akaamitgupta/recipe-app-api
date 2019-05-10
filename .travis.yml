@@ -9,4 +9,4 @@ services:
 before_script: pip install docker-compose
 
 script:
-  - docker-compose run --rm recipe_webserver sh -c "python manage.py test && flake8"
+  - docker-compose run recipe_webserver sh -c "python manage.py test && flake8"
